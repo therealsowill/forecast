@@ -328,7 +328,7 @@ plot.forecast <- function(x, include, PI=TRUE, showgap = TRUE, shaded=TRUE, shad
 
   # Otherwise assume x is from a time series forecast
   n <- length(xx)
-  if (n == 0) {
+  if (isTrue(n == 0)) {
     include <- 0
   } else if (missing(include)) {
     include <- length(xx)
